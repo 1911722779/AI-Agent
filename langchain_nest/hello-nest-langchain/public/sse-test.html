@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSE 流式接口测试</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 640px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.5;
+      background-color: #f3f4f6;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+
+    button.primary {
+      background-color: #2563eb;
+      color: white;
+    }
+
+    button.primary:hover {
+      background-color: #1d4ed8;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .ouput {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border: 1px solid #97a4bd;
+      border-radius: 8px;
+      background-color: #5d6f80;
+      min-height: 120px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .output:empty::before {
+      content: "回复将显示在这里...";
+      color: #576783;
+    }
+
+    .status {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>SSE 流式接口测试</h1>
+  <label for="apiUrl">API 地址</label>
+  <input type="text" 
+    id="apiUrl" 
+    value="http://localhost:3000" 
+    placeholder="http://localhost:3000" 
+  />
+  <label for="query">问题：</label>
+  <input type="text" id="query" placeholder="请输入问题" value="请介绍一下高德地图" />
+  <button class="primary">开始流式请求</button>
+  <p class="status" id="status"></p>
+  <div class="output" id="output"></div>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "splitter-test",
+  "version": "1.0.0",
+  "description": "- loader 加载的大Document\r   \tpaf doc 不是一个类型\r - RecursiveCharacterTextSplitter\r   \t限定 Text类型\r - splitter\r   \t先按照符号character 来切割 符合语义\r \t\t[\"。\",\"，\",\"？\",\"!\"]\r \t\t优先级。最优先\r \t\tchunk_size的靠近 递归的尝试，？！\r \t\t保持语义\r \t\t切断 overlap 牺牲一定的空间（chunk_size 10%） 重复",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@langchain/textsplitters": "^1.0.1",
+    "js-tiktoken": "^1.0.21"
+  }
+}
