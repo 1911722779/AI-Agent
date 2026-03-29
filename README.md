@@ -18,4 +18,4 @@
 
 ## 远程
 
-默认推送到：`https://github.com/1911722779/AI-Agrnt.git`
+默认推送到：`https://github.com/1911722779/AI-Agent.git`（若曾用 `AI-Agrnt` 旧地址，GitHub 会自动重定向到该仓库。）
